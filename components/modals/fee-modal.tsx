@@ -8,7 +8,6 @@ import { Plus } from "lucide-react";
 import Modal from "../ui/modal";
 
 export function FeeModal({ onClose }: { onClose: () => void }) {
-  
   return (
     <Modal
       isOpen={true}
@@ -126,7 +125,7 @@ export function FeeModal({ onClose }: { onClose: () => void }) {
           <RadioGroup
             // value={accountPad}
             // onValueChange={(val: string) => setAccountPad(val)}
-            className="space-y-1"
+            className="flex gap-4"
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem id="none" value="None" />
