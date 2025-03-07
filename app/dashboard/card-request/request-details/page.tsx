@@ -70,8 +70,10 @@ const RequestDetails = () => {
 
   return (
     <div>
-      <h2 className="font-semibold text-3xl mb-2 ">Card Request</h2>
-      <p className="text-gray-600">View and attend to card requests here.</p>
+      <h2 className="font-semibold text-3xl mb-2 ">Request Details</h2>
+      <p className="text-gray-600">
+        Perform predetermined actions on card requests here.
+      </p>
       <Section title="Card Request Details">
         {" "}
         <form action="">
