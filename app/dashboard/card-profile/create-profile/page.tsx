@@ -78,7 +78,7 @@ const CreateProfile = () => {
         <div className="border border-gray2 my-6 rounded-[0.8rem] bg-white1 p-5">
           <h2 className="font-medium">Profile Details</h2>
           <form action="">
-            <div className="grid grid-cols-1 gap-x-10 gap-y-4 py-4 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-20 gap-y-4 py-4 md:grid-cols-2">
               <Input
                 label="Card Name"
                 placeholder="Enter card name"

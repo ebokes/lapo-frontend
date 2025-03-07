@@ -32,6 +32,10 @@ const Modal = ({
   return (
     <div className="inset-0 w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto flex items-center justify-center bg-black bg-opacity-70">
       <div
+        className="fixed inset-0 bg-black/30 backdrop-blur-md"
+        onClick={onClose}
+      />
+      <div
         className={`relative ${
           bg ?? "bg-white"
         } rounded-2xl shadow-lg w-full sm:w-[45rem] max-w-5xl mx-6`}

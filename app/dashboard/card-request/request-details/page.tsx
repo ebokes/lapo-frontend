@@ -75,7 +75,7 @@ const RequestDetails = () => {
       <Section title="Card Request Details">
         {" "}
         <form action="">
-          <div className="grid grid-cols-1 gap-x-10 gap-y-6 py-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-16 gap-y-6 py-4 md:grid-cols-2">
             <Input
               label="Branch Name"
               placeholder="Coporate"
@@ -121,7 +121,7 @@ const RequestDetails = () => {
           </div>
           <div className="w-full">
             <h2 className="font-semibold mb-4 mt-9">Actions</h2>
-            <div className="flex justify-between w-full gap-5">
+            <div className="flex justify-start xl:justify-between flex-wrap w-full gap-5">
               {actionData.map((item) => (
                 <ActionButtons
                   {...item}
