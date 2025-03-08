@@ -1,22 +1,18 @@
 "use client";
 
 import { CardRequestTableType } from "@/types/card-request-table";
-import { ProfileType } from "@/types/profile-table";
 import { customStyles } from "@/utils/custom-table-styles";
-import { Pen, Trash2 } from "lucide-react";
-
-// import { useRouter } from "next/navigation";
+import Link from "next/link";
 import React, { useMemo } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 import { Button } from "../ui/button";
-import Link from "next/link";
+import { Badge } from "../ui/badge";
 
 interface CardRequestTableProps {
   tableData: CardRequestTableType[];
 }
 
 const CardRequestTable: React.FC<CardRequestTableProps> = ({ tableData }) => {
-  //   const router = useRouter();
   const columns: TableColumn<CardRequestTableType>[] = useMemo(
     () => [
       {
@@ -44,10 +40,14 @@ const CardRequestTable: React.FC<CardRequestTableProps> = ({ tableData }) => {
         center: true,
         selector: (row: CardRequestTableType) => row.dateRequested || "-",
       },
+
       {
         name: "Status",
         center: true,
-        selector: (row: CardRequestTableType) => row.status || "-",
+        minWidth: "120px",
+        cell: (row: CardRequestTableType) => {
+          return <Badge variant={row.status}>{row.status}</Badge>;
+        },
       },
       {
         name: "Action",

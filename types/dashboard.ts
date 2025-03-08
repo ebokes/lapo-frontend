@@ -1,12 +1,8 @@
-export interface DashboardStudentType {
-  id: number;
-  name: string;
-  email: string;
-  avatar: any;
-  dateJoined: string;
-  userId: string;
-  examChoice: string;
-  userLocation: string;
-  examDate: string;
-  status: string;
+export interface AnalyticsCardProps {
+  title: string;
+  value: string | number;
+  change?: string;
+  changeInfo?: string;
+  icon?: any;
+  action?: string;
 }

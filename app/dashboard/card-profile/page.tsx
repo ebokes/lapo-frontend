@@ -1,44 +1,10 @@
 import ProfileTable from "@/components/card-profile/profile-table";
 import { Button } from "@/components/ui/button";
 import Searchbar from "@/components/ui/searchbar";
+import { profileTableData } from "@/utils/data";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
-const data = [
-  {
-    id: 1,
-    cardName: "Verve-1",
-    currency: "NGN",
-    expiration: "40 months",
-    binPrefix: 50611234,
-    dateCreated: "11/10/2024  23:21:03",
-  },
-  {
-    id: 2,
-    cardName: "Verve-2",
-    currency: "NGN",
-    expiration: "40 months",
-    binPrefix: 50611234,
-    dateCreated: "11/10/2024  23:21:03",
-  },
-  {
-    id: 3,
-    cardName: "Verve-3",
-    currency: "NGN",
-    expiration: "40 months",
-    binPrefix: 50611234,
-    dateCreated: "11/10/2024  23:21:03",
-  },
-  {
-    id: 4,
-    cardName: "Verve-4",
-    currency: "NGN",
-    expiration: "40 months",
-    binPrefix: 50611234,
-    dateCreated: "11/10/2024  23:21:03",
-  },
-];
 
 const CardProfile = () => {
   return (
@@ -62,7 +28,7 @@ const CardProfile = () => {
         </Button>
       </div>
       <hr className="my-5 border-gray-300" />
-      <ProfileTable tableData={data} />
+      <ProfileTable tableData={profileTableData} />
     </div>
   );
 };

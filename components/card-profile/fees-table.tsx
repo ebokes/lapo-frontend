@@ -1,10 +1,7 @@
 "use client";
 
-import { FeesType, ProfileType } from "@/types/profile-table";
+import { FeesType } from "@/types/profile-table";
 import { customStyles } from "@/utils/custom-table-styles";
-import { Pen, Trash2 } from "lucide-react";
-
-// import { useRouter } from "next/navigation";
 import React, { useMemo } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 
@@ -13,7 +10,6 @@ interface FeesTableProps {
 }
 
 const FeesTable: React.FC<FeesTableProps> = ({ tableData }) => {
-  //   const router = useRouter();
   const columns: TableColumn<FeesType>[] = useMemo(
     () => [
       {

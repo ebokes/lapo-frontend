@@ -2,14 +2,12 @@
 
 import { RecentCardRequestTableType } from "@/types/card-request-table";
 import { customStyles } from "@/utils/custom-table-styles";
-import { Maximize2, Pen, Trash2 } from "lucide-react";
-
-// import { useRouter } from "next/navigation";
+import { Maximize2 } from "lucide-react";
+import Link from "next/link";
 import React, { useMemo } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 
 interface RecentCardRequestTableProps {
   tableData: RecentCardRequestTableType[];
@@ -18,7 +16,6 @@ interface RecentCardRequestTableProps {
 const RecentCardRequestTable: React.FC<RecentCardRequestTableProps> = ({
   tableData,
 }) => {
-  //   const router = useRouter();
   const columns: TableColumn<RecentCardRequestTableType>[] = useMemo(
     () => [
       {
