@@ -17,7 +17,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
     <div
       className={`w-[30rem] pb-12 px-8 h-screen fixed left-0 bottom-0 bg-white1 border-r-2 border-[#0000000d] z-[51] transform ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 lg:translate-x-0`}
+      } transition-transform duration-300 lg:translate-x-0 overflow-x-hidden`}
     >
       <div className="my-8 sticky top-8 z-50">
         <div className="flex justify-between items-center">
@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           />
         </div>
       </div>
-      <div className=" overflow-y-auto h-[62vh] mb-10">
+      <div className=" overflow-y-auto h-[62vh] pb-[10rem]">
         {/* <div className="min-h-[20rem]"> */}
         <div className="flex flex-col mt-4 gap-4" onClick={toggleSidebar}>
           {LinksData.map((item) => (
@@ -58,9 +58,9 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           ))}
         </div>
       </div>
-      <div className="ml-4 bg-white">
-        <div className="fixed bottom-[15rem] ml-0 mt-10 md:mt-4 mb-10">
-          <div className=" flex gap-4 items-center">
+      <div className="pl-5 fixed bottom-[4rem] bg-white w-[87%]">
+        <div className="bottom-[15rem] mt-10 mb-[5rem]">
+          <div className="flex gap-4 items-center">
             <Image
               src={logout}
               width={50}
@@ -72,7 +72,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           </div>
         </div>
 
-        <div className="fixed bottom-[4rem]">
+        <div className="">
           <p className="mt-8 text-[#7E8B9C] text-lg">POWERED BY</p>
           <div className="w-[15rem]">
             <Image

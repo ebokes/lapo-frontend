@@ -1,14 +1,14 @@
-import DashboardAnalytics from "@/components/dashboard/dashboard-analytics";
-import Intro from "@/components/dashboard/dashboard-intro";
-import QuickAccess from "@/components/dashboard/quick-access";
 // import Login from "./auth/login/page";
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <Intro />
-      <QuickAccess />
-      <DashboardAnalytics />
+    <div className="flex justify-center items-center h-screen">
+      <Button variant="blue" asChild>
+        <Link href="/dashboard">Go to Dashboard</Link>
+      </Button>
     </div>
   );
 }

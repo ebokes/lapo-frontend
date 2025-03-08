@@ -46,7 +46,7 @@ const CardProfile = () => {
       <h2 className="font-semibold text-3xl mb-2 ">Card Profile</h2>
       <p className="text-gray-600">Create, view and edit card profiles here.</p>
       <hr className="w-full my-5 border-gray-300" />
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between gap-8 flex-wrap items-center">
         <Searchbar
           rounded="rounded-[0.8rem]"
           placeholder="Search by card name"
