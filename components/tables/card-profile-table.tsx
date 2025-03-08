@@ -1,42 +1,42 @@
 "use client";
 
-import { ProfileType } from "@/types/profile-table";
+import { CardProfileType } from "@/types/profile-table";
 import { customStyles } from "@/utils/custom-table-styles";
 import { Pen, Trash2 } from "lucide-react";
 import React, { useMemo } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 
-interface ProfileTableProps {
-  tableData: ProfileType[];
+interface CardProfileTableProps {
+  tableData: CardProfileType[];
 }
 
-const ProfileTable: React.FC<ProfileTableProps> = ({ tableData }) => {
-  const columns: TableColumn<ProfileType>[] = useMemo(
+const CardProfileTable: React.FC<CardProfileTableProps> = ({ tableData }) => {
+  const columns: TableColumn<CardProfileType>[] = useMemo(
     () => [
       {
         name: "Card Name",
-        selector: (row: ProfileType) => row.cardName || "-",
+        selector: (row: CardProfileType) => row.cardName || "-",
       },
       {
         name: "Currency",
         center: true,
-        selector: (row: ProfileType) => row.currency || "-",
+        selector: (row: CardProfileType) => row.currency || "-",
       },
       {
         name: "Expiration",
         center: true,
-        selector: (row: ProfileType) => row.expiration || "-",
+        selector: (row: CardProfileType) => row.expiration || "-",
       },
       {
         name: "Bin Prefix",
         center: true,
-        selector: (row: ProfileType) => row.binPrefix || "-",
+        selector: (row: CardProfileType) => row.binPrefix || "-",
       },
 
       {
         name: "Date Created",
         center: true,
-        selector: (row: ProfileType) => row.dateCreated || "-",
+        selector: (row: CardProfileType) => row.dateCreated || "-",
       },
       {
         name: "Action",
@@ -64,4 +64,4 @@ const ProfileTable: React.FC<ProfileTableProps> = ({ tableData }) => {
   );
 };
 
-export default ProfileTable;
+export default CardProfileTable;

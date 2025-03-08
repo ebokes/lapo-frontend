@@ -1,4 +1,4 @@
-export interface ProfileType {
+export interface CardProfileType {
   id: number;
   cardName: string;
   currency: string;
@@ -8,7 +8,7 @@ export interface ProfileType {
   action?: any;
 }
 
-export interface FeesType {
+export interface CardFeesType {
   id: number;
   name: any;
   value: any;

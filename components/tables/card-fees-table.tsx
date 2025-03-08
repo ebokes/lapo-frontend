@@ -1,51 +1,51 @@
 "use client";
 
-import { FeesType } from "@/types/profile-table";
+import { CardFeesType } from "@/types/profile-table";
 import { customStyles } from "@/utils/custom-table-styles";
 import React, { useMemo } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 
-interface FeesTableProps {
-  tableData: FeesType[];
+interface CardFeesTableProps {
+  tableData: CardFeesType[];
 }
 
-const FeesTable: React.FC<FeesTableProps> = ({ tableData }) => {
-  const columns: TableColumn<FeesType>[] = useMemo(
+const CardFeesTable: React.FC<CardFeesTableProps> = ({ tableData }) => {
+  const columns: TableColumn<CardFeesType>[] = useMemo(
     () => [
       {
         name: "Name",
-        selector: (row: FeesType) => row.name || "-",
+        selector: (row: CardFeesType) => row.name || "-",
       },
       {
         name: "Value",
         center: true,
-        selector: (row: FeesType) => row.value || "-",
+        selector: (row: CardFeesType) => row.value || "-",
       },
       {
         name: "Frequency",
         center: true,
-        selector: (row: FeesType) => row.frequency || "-",
+        selector: (row: CardFeesType) => row.frequency || "-",
       },
       {
         name: "Currency",
         center: true,
-        selector: (row: FeesType) => row.currency || "-",
+        selector: (row: CardFeesType) => row.currency || "-",
       },
 
       {
         name: "Time",
         center: true,
-        selector: (row: FeesType) => row.time || "-",
+        selector: (row: CardFeesType) => row.time || "-",
       },
       {
         name: "Account Pad",
         center: true,
-        selector: (row: FeesType) => row.accountPad || "-",
+        selector: (row: CardFeesType) => row.accountPad || "-",
       },
       {
         name: "Account",
         center: true,
-        selector: (row: FeesType) => row.account || "-",
+        selector: (row: CardFeesType) => row.account || "-",
       },
     ],
     []
@@ -61,4 +61,4 @@ const FeesTable: React.FC<FeesTableProps> = ({ tableData }) => {
   );
 };
 
-export default FeesTable;
+export default CardFeesTable;

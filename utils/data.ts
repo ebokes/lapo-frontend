@@ -8,7 +8,7 @@ import active from "@/assets/dashboard-icons/active.svg";
 import pending from "@/assets/dashboard-icons/pending.svg";
 import total from "@/assets/dashboard-icons/total.svg";
 import revenue from "@/assets/dashboard-icons/revenue.svg";
-import { ProfileType } from "@/types/profile-table";
+import { CardFeesType, CardProfileType } from "@/types/profile-table";
 import { AnalyticsCardProps } from "@/types/dashboard";
 
 export const monthlyAnalyticsData = [
@@ -145,7 +145,7 @@ export const cardRequests: CardRequestTableType[] = [
   },
 ];
 
-export const profileTableData: ProfileType[] = [
+export const profileTableData: CardProfileType[] = [
   {
     id: 1,
     cardName: "Verve-1",
@@ -177,5 +177,52 @@ export const profileTableData: ProfileType[] = [
     expiration: "40 months",
     binPrefix: 50611234,
     dateCreated: "11/10/2024  23:21:03",
+  },
+];
+
+export const cardFeesData: CardFeesType[] = [
+  {
+    id: 1,
+    name: "Subscription Fee",
+    value: 100,
+    frequency: "Monthly",
+    currency: "USD",
+    time: "2025-03-04T10:00:00Z",
+    accountPad: "12345",
+    account: "Main Account",
+  },
+  {
+    id: 2,
+    name: "Transaction Fee",
+    value: 2.5,
+    frequency: "Per Transaction",
+    currency: "USD",
+    time: "2025-03-04T12:30:00Z",
+  },
+  {
+    id: 3,
+    name: "Maintenance Fee",
+    value: 50,
+    frequency: "Annually",
+    currency: "EUR",
+    time: "2025-01-01T00:00:00Z",
+    account: "Savings Account",
+  },
+  {
+    id: 4,
+    name: "Processing Fee",
+    value: 10,
+    frequency: "One-time",
+    currency: "GBP",
+    time: "2025-03-01T15:45:00Z",
+    accountPad: "67890",
+  },
+  {
+    id: 5,
+    name: "Late Payment Fee",
+    value: 25,
+    frequency: "Per Delay",
+    currency: "USD",
+    time: "2025-02-28T08:20:00Z",
   },
 ];

@@ -1,4 +1,5 @@
-import ProfileTable from "@/components/card-profile/profile-table";
+import { ZoomIn } from "@/app/transition";
+import CardProfileTable from "@/components/tables/card-profile-table";
 import { Button } from "@/components/ui/button";
 import Searchbar from "@/components/ui/searchbar";
 import { profileTableData } from "@/utils/data";
@@ -8,7 +9,7 @@ import React from "react";
 
 const CardProfile = () => {
   return (
-    <div>
+    <ZoomIn>
       <h2 className="font-semibold text-3xl mb-2 ">Card Profile</h2>
       <p className="text-gray-600">Create, view and edit card profiles here.</p>
       <hr className="w-full my-5 border-gray-300" />
@@ -28,8 +29,8 @@ const CardProfile = () => {
         </Button>
       </div>
       <hr className="my-5 border-gray-300" />
-      <ProfileTable tableData={profileTableData} />
-    </div>
+      <CardProfileTable tableData={profileTableData} />
+    </ZoomIn>
   );
 };
 

@@ -4,7 +4,7 @@ import {
   weeklyAnalyticsData,
 } from "@/utils/data";
 import CardStatusDistribution from "./card-status-distribution";
-import RecentCardRequestTable from "./recent-card-request-table";
+import RecentCardRequestTable from "../tables/recent-card-request-table";
 import MonthlyIssuance from "./monthly-issuance";
 import ThisWeeksIncome from "./this-weeks-income";
 

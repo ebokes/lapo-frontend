@@ -1,14 +1,15 @@
 import DashboardAnalytics from "@/components/dashboard/dashboard-analytics";
 import Intro from "@/components/dashboard/dashboard-intro";
 import QuickAccess from "@/components/dashboard/quick-access";
+import { ZoomIn } from "../transition";
 
 const Dashboard = () => {
   return (
-    <div>
+    <ZoomIn>
       <Intro />
       <QuickAccess />
       <DashboardAnalytics />
-    </div>
+    </ZoomIn>
   );
 };
 

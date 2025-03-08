@@ -1,26 +1,11 @@
 "use client";
 
-import * as React from "react";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import Modal from "../ui/modal";
-import { Plus } from "lucide-react";
-import useToggle from "../hooks/use-toggle";
-import Image from "next/image";
 import success from "@/assets/card-request-icons/success.svg";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Modal from "../ui/modal";
 
 function DispatchSuccessModal({ onClose }: { onClose: () => void }) {
-  // const [toggle, setToggle] = React.useState(false);
-  // const handleCloseToggle = () => setToggle(false);
-  // console.log(toggle);
-
-  const {
-    isToggled: showModal,
-    toggleOn: openModal,
-    toggleOff: closeModal,
-  } = useToggle();
   return (
     <Modal
       isOpen={true}
