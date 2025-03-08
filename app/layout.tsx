@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import localFont from "next/font/local";
-import Layout from "./dashboard/layout";
+import "./globals.css";
 
 const satoshi = localFont({
   src: [
-    // LIGHT (weight 300)
     {
       path: "../public/fonts/Satoshi-Light.woff",
       weight: "300",
@@ -16,15 +14,11 @@ const satoshi = localFont({
       weight: "300",
       style: "italic",
     },
-
-    // REGULAR (weight 400)
     {
       path: "../public/fonts/Satoshi-Regular.woff",
       weight: "400",
       style: "normal",
     },
-
-    // MEDIUM (weight 500)
     {
       path: "../public/fonts/Satoshi-Medium.woff",
       weight: "500",
@@ -36,7 +30,6 @@ const satoshi = localFont({
       style: "italic",
     },
 
-    // BOLD (weight 700)
     {
       path: "../public/fonts/Satoshi-Bold.woff",
       weight: "700",
@@ -47,8 +40,6 @@ const satoshi = localFont({
       weight: "700",
       style: "italic",
     },
-
-    // BLACK (weight 900)
     {
       path: "../public/fonts/Satoshi-Black.woff",
       weight: "900",
