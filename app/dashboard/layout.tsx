@@ -36,7 +36,7 @@ const Layout = ({ children }: LayoutProps) => {
         {/* Content */}
         <div className="p-4 lg:p-8 bg-gray1">
           <div className="h-[90vh] overflow-auto">
-            <div className="mt-7">{children}</div>
+            <div className="mt-12 lg:mt-7">{children}</div>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 lg:translate-x-0`}
     >
-      <div className="my-8 sticky top-8 z-50 ">
+      <div className="my-8 sticky top-8 z-50">
         <div className="flex justify-between items-center">
           <Link href="/">
             <Image src={logo} width={1500} height={1500} alt="logo" />
@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           />
         </div>
       </div>
-      <div className=" overflow-y-auto h-[62vh]">
+      <div className=" overflow-y-auto h-[62vh] mb-10">
         {/* <div className="min-h-[20rem]"> */}
         <div className="flex flex-col mt-4 gap-4" onClick={toggleSidebar}>
           {LinksData.map((item) => (
@@ -58,7 +58,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
           ))}
         </div>
       </div>
-      <div className="ml-4">
+      <div className="ml-4 bg-white">
         <div className="fixed bottom-[15rem] ml-0 mt-10 md:mt-4 mb-10">
           <div className=" flex gap-4 items-center">
             <Image
