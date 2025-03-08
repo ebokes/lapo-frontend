@@ -1,12 +1,11 @@
-import Links from "./links";
-import LinksData from "./link-data";
-import Image from "next/image";
 import logo from "@/assets/LAPO_Logo.svg";
 import logo2 from "@/assets/cardinfra logo.svg";
 import logout from "@/assets/sidebar-icons/logout.svg";
-import Link from "next/link";
-import { BsArrow90DegLeft } from "react-icons/bs";
 import { X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import LinksData from "./link-data";
+import Links from "./links";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -23,59 +22,57 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
       <div className="my-8 sticky top-8 z-50 ">
         <div className="flex justify-between items-center">
           <Link href="/">
-            <Image
-              src={logo}
-              width={1500}
-              height={1500}
-              alt="logo"
-              // style={{ width: "18rem", objectFit: "cover" }}
-            />
+            <Image src={logo} width={1500} height={1500} alt="logo" />
           </Link>
           <X
             onClick={toggleSidebar}
             size={19}
-            className="cursor-pointer block lg:hidden absolute -top-6 -right-6 text-gray2"
+            className="cursor-pointer block lg:hidden absolute -top-6 -right-6 text-gray-500"
           />
         </div>
       </div>
-
-      <div className="flex flex-col mt-20 gap-4" onClick={toggleSidebar}>
-        {LinksData.map((item) => (
-          <>
-            {item.label === "Dashboard" ? (
-              <div>
+      <div className=" overflow-y-auto h-[62vh]">
+        {/* <div className="min-h-[20rem]"> */}
+        <div className="flex flex-col mt-4 gap-4" onClick={toggleSidebar}>
+          {LinksData.map((item) => (
+            <>
+              {item.label === "Dashboard" ? (
+                <div>
+                  <Links
+                    key={item.label}
+                    label={item.label}
+                    path={item.path}
+                    icon={item.icon}
+                  />
+                  <p className="ml-8 mt-8 text-[#7E8B9C] text-lg">MAIN MENU</p>
+                </div>
+              ) : (
                 <Links
                   key={item.label}
                   label={item.label}
                   path={item.path}
                   icon={item.icon}
                 />
-                <p className="ml-8 mt-8 text-[#7E8B9C] text-lg">MAIN MENU</p>
-              </div>
-            ) : (
-              <Links
-                key={item.label}
-                label={item.label}
-                path={item.path}
-                icon={item.icon}
-              />
-            )}
-          </>
-        ))}
-      </div>
-
-      <div className="sticky top-[90%] justify-center ml-4 mt-4">
-        <div className=" flex gap-4 items-center">
-          <Image
-            src={logout}
-            width={50}
-            height={50}
-            alt="logout icon"
-            style={{ width: "3rem" }}
-          />
-          <p className="font-medium">Logout</p>
+              )}
+            </>
+          ))}
         </div>
-        <div>
+      </div>
+      <div className="ml-4">
+        <div className="fixed bottom-[15rem] ml-0 mt-10 md:mt-4 mb-10">
+          <div className=" flex gap-4 items-center">
+            <Image
+              src={logout}
+              width={50}
+              height={50}
+              alt="logout icon"
+              style={{ width: "3rem" }}
+            />
+            <p className="font-medium">Logout</p>
+          </div>
+        </div>
+
+        <div className="fixed bottom-[4rem]">
           <p className="mt-8 text-[#7E8B9C] text-lg">POWERED BY</p>
           <div className="w-[15rem]">
             <Image

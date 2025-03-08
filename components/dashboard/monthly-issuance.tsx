@@ -27,42 +27,49 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 const MonthlyIssuanceChart = ({ data }: any) => {
   return (
-    <div className="bg-white rounded-2xl border">
-      <div className="p-6">
+    <div className="bg-white rounded-2xl border overflow-auto">
+      <div className="p-6 ">
         <h2 className="text-3xl font-medium text-gray-800 mb-6">
           Monthly Issuance
         </h2>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={data} barSize={30}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tick={{ fill: "#6B7280" }}
-              axisLine={false}
-              tickLine={false}
-            />
-            <YAxis
-              tick={{ fill: "#6B7280" }}
-              domain={[0, 100]}
-              axisLine={false}
-              tickLine={false}
-            />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: "#f5f5f5" }} />
-            <Bar
-              dataKey="instant"
-              stackId="a"
-              fill="#1E40AF"
-              radius={[5, 5, 0, 0]}
-            />
-            <Bar
-              dataKey="personalized"
-              stackId="a"
-              fill="#BFDBFE"
-              style={{ paddingBottom: "-5rem" }}
-              radius={[5, 5, 0, 0]}
-            />
-          </BarChart>
-        </ResponsiveContainer>
+        <div className=" overflow-auto">
+          <div className="min-w-[60rem]">
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={data} barSize={30}>
+                <CartesianGrid vertical={false} />
+                <XAxis
+                  dataKey="month"
+                  tick={{ fill: "#6B7280" }}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <YAxis
+                  tick={{ fill: "#6B7280" }}
+                  domain={[0, 100]}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <Tooltip
+                  content={<CustomTooltip />}
+                  cursor={{ fill: "#f5f5f5" }}
+                />
+                <Bar
+                  dataKey="instant"
+                  stackId="a"
+                  fill="#1E40AF"
+                  radius={[5, 5, 0, 0]}
+                />
+                <Bar
+                  dataKey="personalized"
+                  stackId="a"
+                  fill="#BFDBFE"
+                  style={{ paddingBottom: "-5rem" }}
+                  radius={[5, 5, 0, 0]}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
       </div>
       <hr />
       <div className="p-6">
