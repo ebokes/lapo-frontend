@@ -32,7 +32,6 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
         </div>
       </div>
       <div className=" overflow-y-auto h-[62vh] pb-[10rem]">
-        {/* <div className="min-h-[20rem]"> */}
         <div className="flex flex-col mt-4 gap-4" onClick={toggleSidebar}>
           {LinksData.map((item) => (
             <>

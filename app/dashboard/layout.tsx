@@ -1,25 +1,29 @@
 "use client";
 
 import { Header } from "@/components/layouts/header";
-import React, { useState } from "react";
+import React from "react";
 import { MdMenu } from "react-icons/md";
 import Sidebar from "../../components/layouts/sidebar";
+import useToggle from "@/components/hooks/use-toggle";
 
 interface LayoutProps {
   children?: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const {
+    isToggled: isSidebarOpen,
+    toggleOff: closeSidebar,
+    toggle: toggleSidebar,
+  } = useToggle();
 
-  console.log(isSidebarOpen);
   return (
     <div className="flex min-h-screen pr-0 relative">
       {/* Sidebar */}
       <div className=" bottom-0">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
+
       <div className="flex flex-col gap-x-4 absolute right-0 left-0 lg:left-[30rem] min-h-screen">
         {/* Navbar */}
         <div className="flex justify-between items-center sticky top-0 z-50 px-4 lg:px-8  bg-white shadow-sm">
@@ -36,6 +40,12 @@ const Layout = ({ children }: LayoutProps) => {
         {/* Content */}
         <div className="p-4 lg:p-8 bg-gray1">
           <div className="h-[90vh] overflow-auto">
+            <div
+              className={`${
+                isSidebarOpen ? "fixed" : "hidden"
+              } z-[5] inset-0 bg-black/30`}
+              onClick={closeSidebar}
+            />
             <div className="mt-12 lg:mt-7">{children}</div>
           </div>
         </div>
